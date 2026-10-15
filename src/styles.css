@@ -1,0 +1,494 @@
+:root {
+  --paper: #f3f4ef;
+  --ink: #13213d;
+  --muted: #5a6275;
+  --rule: #d6d9d0;
+  --cobalt: #1f3fd8;
+  --marker: #ffe45c;
+  --pick-bg: #e8ecfb;
+
+  --display: 'Bricolage Grotesque', 'Noto Sans TC', system-ui, sans-serif;
+  --body: 'Noto Sans TC', system-ui, -apple-system, 'PingFang TC', sans-serif;
+
+  color-scheme: light dark;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper: #0f1528;
+    --ink: #e8ebf4;
+    --muted: #9aa3b8;
+    --rule: #28304a;
+    --cobalt: #8fa3ff;
+    --marker: #6e5b00;
+    --pick-bg: #18203a;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--body);
+  font-size: 16px;
+  line-height: 1.75;
+}
+
+a {
+  color: var(--cobalt);
+  text-underline-offset: 3px;
+}
+
+button {
+  font: inherit;
+  color: inherit;
+}
+
+:focus-visible {
+  outline: 2px solid var(--cobalt);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+.page {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ---------- Masthead ---------- */
+
+.masthead {
+  padding: 72px 0 40px;
+}
+
+.masthead__who {
+  margin: 0 0 12px;
+  color: var(--muted);
+  font-weight: 500;
+}
+
+.masthead__title {
+  margin: 0;
+  font-family: var(--display);
+  font-weight: 800;
+  font-size: clamp(3rem, 9vw, 6.5rem);
+  line-height: 1.02;
+  letter-spacing: -0.01em;
+}
+
+.masthead__lede {
+  max-width: 34em;
+  margin: 24px 0 0;
+  font-size: 1.0625rem;
+  color: var(--muted);
+}
+
+/* ---------- Tabs & filters ---------- */
+
+.tabs {
+  display: flex;
+  gap: 4px;
+  border-bottom: 2px solid var(--ink);
+}
+
+.tabs__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 18px;
+  border: 0;
+  background: none;
+  font-weight: 700;
+  cursor: pointer;
+  border-radius: 6px 6px 0 0;
+}
+
+.tabs__btn[aria-pressed='true'] {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+.tabs__count {
+  min-width: 1.6em;
+  padding: 0 6px;
+  border-radius: 99px;
+  background: #ffe45c;
+  color: #13213d;
+  font-size: 0.8125rem;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px 20px;
+  padding: 20px 0 8px;
+}
+
+.search input {
+  width: min(320px, 100%);
+  padding: 8px 12px;
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  background: transparent;
+  color: var(--ink);
+  font: inherit;
+}
+
+.search input::placeholder {
+  color: var(--muted);
+}
+
+.kinds {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.kinds button {
+  padding: 4px 12px;
+  border: 1px solid var(--rule);
+  border-radius: 99px;
+  background: none;
+  font-size: 0.9375rem;
+  cursor: pointer;
+}
+
+.kinds button[aria-pressed='true'] {
+  border-color: var(--ink);
+  background: var(--ink);
+  color: var(--paper);
+}
+
+.filters__status {
+  flex-basis: 100%;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 16px;
+  color: var(--muted);
+  font-size: 0.9375rem;
+}
+
+.filters__tag mark {
+  background: linear-gradient(transparent 55%, var(--marker) 55%);
+  color: var(--ink);
+}
+
+.linklike {
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--cobalt);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  cursor: pointer;
+}
+
+/* ---------- Issues ---------- */
+
+.issue {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 40px;
+  padding: 48px 0;
+  border-bottom: 1px solid var(--rule);
+}
+
+.issue__date {
+  align-self: start;
+  position: sticky;
+  top: 24px;
+}
+
+.issue__date h2 {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.issue__md {
+  font-family: var(--display);
+  font-weight: 800;
+  font-size: clamp(3.5rem, 7vw, 5.25rem);
+  line-height: 0.95;
+  letter-spacing: -0.03em;
+  color: var(--cobalt);
+  font-variant-numeric: tabular-nums;
+}
+
+.issue__year {
+  margin-top: 10px;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: var(--muted);
+}
+
+.issue__aside {
+  margin: 16px 0 0;
+  color: var(--muted);
+  font-size: 0.9375rem;
+  line-height: 1.7;
+}
+
+.issue__refs {
+  list-style: none;
+  margin: 16px 0 0;
+  padding: 0;
+  font-size: 0.875rem;
+}
+
+.issue__entries {
+  min-width: 0;
+}
+
+/* ---------- Entry ---------- */
+
+.entry {
+  display: grid;
+  grid-template-columns: minmax(0, 15rem) minmax(0, 1fr);
+  gap: 8px 32px;
+  padding: 28px 0;
+  border-top: 1px solid var(--rule);
+}
+
+.entry:first-child {
+  border-top: 0;
+  padding-top: 4px;
+}
+
+.entry__brand {
+  margin: 0;
+  font-family: var(--display);
+  font-weight: 600;
+  font-size: 1.75rem;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  overflow-wrap: anywhere;
+}
+
+.entry__title {
+  margin: 6px 0 0;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.entry__kind {
+  display: block;
+  margin-top: 4px;
+  font-size: 0.8125rem;
+  font-weight: 400;
+  color: var(--muted);
+}
+
+.entry__credit {
+  margin: 4px 0 0;
+  font-size: 0.8125rem;
+  color: var(--muted);
+}
+
+.entry__body {
+  max-width: 38em;
+}
+
+.entry__note {
+  margin: 0;
+  font-size: 1.0625rem;
+}
+
+.entry__note--empty {
+  color: var(--muted);
+  font-style: italic;
+  font-size: 0.9375rem;
+}
+
+.entry__why {
+  margin: 12px 0 0;
+  padding-left: 14px;
+  border-left: 3px solid var(--cobalt);
+  color: var(--muted);
+  font-size: 0.9375rem;
+}
+
+.entry__tags {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 14px;
+  margin: 14px 0 0;
+  padding: 0;
+}
+
+.tag {
+  padding: 0 2px;
+  border: 0;
+  background: linear-gradient(transparent 58%, var(--marker) 58%);
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.tag:hover {
+  background: var(--marker);
+}
+
+.entry__toggle {
+  margin-top: 12px;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--cobalt);
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.entry__toggle::before {
+  content: '+';
+  display: inline-block;
+  width: 1em;
+  transition: transform 0.2s ease;
+}
+
+.entry__toggle[aria-expanded='true']::before {
+  transform: rotate(45deg);
+}
+
+.entry__more {
+  margin-top: 10px;
+  padding: 14px 16px;
+  border-radius: 6px;
+  background: color-mix(in srgb, var(--ink) 5%, transparent);
+  font-size: 0.9375rem;
+  animation: reveal 0.22s ease-out;
+}
+
+.entry__more p {
+  margin: 0;
+}
+
+.entry__links {
+  list-style: none;
+  margin: 8px 0 0;
+  padding: 0;
+}
+
+.entry__more p + .entry__links {
+  margin-top: 10px;
+}
+
+@keyframes reveal {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+}
+
+/* Claude 候選：用淡藍底區隔，表示「還沒正式分享」 */
+.issue--picks .issue__md {
+  font-size: clamp(3rem, 6vw, 4.5rem);
+}
+
+.entry--pick {
+  padding-left: 20px;
+  padding-right: 20px;
+  border-top: 0;
+  margin-bottom: 12px;
+  border-radius: 8px;
+  background: var(--pick-bg);
+}
+
+.entry--pick:first-child {
+  padding-top: 28px;
+}
+
+.empty {
+  padding: 64px 0;
+  color: var(--muted);
+  text-align: center;
+}
+
+.empty p {
+  margin: 0 0 4px;
+}
+
+.footer {
+  padding: 48px 0 64px;
+  color: var(--muted);
+  font-size: 0.875rem;
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 860px) {
+  .issue {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    padding: 36px 0;
+  }
+
+  .issue__date {
+    position: static;
+  }
+
+  .entry {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 520px) {
+  .page {
+    padding: 0 16px;
+  }
+
+  .masthead {
+    padding: 48px 0 28px;
+  }
+
+  .tabs__btn {
+    padding: 10px 12px;
+  }
+
+  .search input {
+    width: 100%;
+  }
+
+  .search {
+    flex-basis: 100%;
+  }
+
+  .entry--pick {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before {
+    animation: none !important;
+    transition: none !important;
+  }
+}

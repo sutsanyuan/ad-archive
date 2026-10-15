@@ -1,0 +1,323 @@
+{
+  "source": "https://docs.google.com/presentation/d/14acsOEM59zCAKZ5o9wHiNcw_E5eMd_PMrWcRDndEyq4/edit",
+  "issues": [
+    {
+      "id": "2026-09-11",
+      "date": "2026-09-11",
+      "entries": [
+        {
+          "id": "kitkat-heist",
+          "brand": "KitKat",
+          "title": "The KitKat Heist",
+          "kind": "campaign",
+          "tags": [
+            "危機變轉機",
+            "互動遊戲",
+            "Cannes Lions"
+          ],
+          "note": "真的有 12 噸 KitKat、約 41 萬條巧克力在運輸途中被偷。KitKat 沒有把它當成危機，而是直接把整件事情做成一場「找巧克力的真實犯罪遊戲」。消費者可以輸入自己手上的 KitKat 批號，查自己的巧克力是不是來自那批失竊貨物。最後甚至有真實線索透過這個活動被找到。",
+          "links": [
+            {
+              "label": "Nestlé 新聞稿",
+              "url": "https://www.nestle.com/media/news/kitkat-heist-brand-cannes-lions-win"
+            }
+          ]
+        },
+        {
+          "id": "delonghi-brad-pitt",
+          "brand": "De'Longhi",
+          "title": "Brad Pitt × Spike Jonze",
+          "kind": "campaign",
+          "tags": [
+            "名人",
+            "娛樂化",
+            "精品家電"
+          ],
+          "note": "現在 premium brand 的產品廣告，已經不一定要一直強調產品功能，而是先創造一個值得看的 entertainment，再讓產品進入故事。",
+          "detail": "LOLA Madrid 操刀，由 Spike Jonze 執導。創意長的說法是：Brad Pitt 本身就夠有魅力，拿他開玩笑反而讓他更討喜。",
+          "links": []
+        },
+        {
+          "id": "uts-year-that-made-me",
+          "brand": "UTS College",
+          "title": "The Year That Made Me",
+          "kind": "campaign",
+          "tags": [
+            "UGC",
+            "教育",
+            "學生故事"
+          ],
+          "note": "它把教育廣告從「我們提供什麼」轉成「學生最後變成什麼」。",
+          "detail": "整支 campaign 以學生自己拍的內容為素材剪成。",
+          "links": []
+        },
+        {
+          "id": "lego-everyone-wants-a-piece",
+          "brand": "LEGO",
+          "title": "Everyone Wants a Piece",
+          "kind": "campaign",
+          "tags": [
+            "名人",
+            "是不是 AI？",
+            "病毒擴散"
+          ],
+          "note": "IS that AI? → body doubles + CGI",
+          "detail": "Messi、C 羅、Mbappé、Vinícius Jr. 同框，網友一度認定是 AI 生成，討論反而推著影片衝到約 3.14 億次觀看。LEGO 後來公開幕後：是替身拍攝再用 CGI 合成到同一個空間。網路上也冒出大量二創。",
+          "links": [
+            {
+              "label": "二創影片整理",
+              "url": "https://pictame.com/en/discover/hashtag/2026-lego"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "2026-07-08",
+      "date": "2026-07-08",
+      "entries": [
+        {
+          "id": "vaseline-originals",
+          "brand": "Vaseline",
+          "title": "Vaseline Originals & 馬拉松乳頭贊助",
+          "kind": "campaign",
+          "tags": [
+            "社群共創",
+            "TikTok",
+            "運動贊助"
+          ],
+          "note": "把網路上的 Vaseline 偏方和分享偏方的創作者，直接變成正式產品線。",
+          "detail": "共創產品在 TikTok 上市時，銷量比經典凡士林高出 466%，上市時每兩秒賣出一罐。跑者長年在長跑前抹凡士林防止乳頭磨破，於是 2026 年品牌乾脆成為倫敦馬拉松的「官方乳頭保護贊助商」，賽前賽中都提供產品。之後自發的用法分享貼文增加了 24%，等於用戶持續在幫品牌做產品研發。",
+          "links": []
+        },
+        {
+          "id": "dove-real-reviews",
+          "brand": "Dove",
+          "title": "r/eal Reviews",
+          "kind": "campaign",
+          "tags": [
+            "Reddit",
+            "真實評價",
+            "Cannes Lions"
+          ],
+          "note": "敢公開好壞評價，反而換來信任。",
+          "detail": "和 Reddit 合作，邀請網友毫無修飾地評論 Intensive Repair 10-in-1 髮膜，並承諾在取得同意後公開前 50 則，不管是好評還是負評。銷量比前一年成長超過一倍，活動期間成為美國最暢銷髮膜，累積超過 10 億次自然曝光，拿下 6 座獅子獎。",
+          "links": []
+        },
+        {
+          "id": "cif-clean-my-name",
+          "brand": "Cif",
+          "title": "Clean My Name",
+          "kind": "campaign",
+          "tags": [
+            "社會議題",
+            "巴西",
+            "雙關"
+          ],
+          "note": "清潔品牌幫你「洗清名字」。",
+          "detail": "在巴西，負債常被說成「名字髒了」，影響超過 8,000 萬人。Cif 與巴西最大的債務協商平台 Serasa 合作，幫民眾償還部分債務，促成數百萬的債務重新協商，品牌銷量也跟著提升。",
+          "links": []
+        }
+      ]
+    },
+    {
+      "id": "2026-06-12",
+      "date": "2026-06-12",
+      "links": [
+        {
+          "label": "IG 參考 1",
+          "url": "https://www.instagram.com/p/DK1YvilCIVB/"
+        },
+        {
+          "label": "IG 參考 2",
+          "url": "https://www.instagram.com/p/DKb-JVyCqPO/"
+        },
+        {
+          "label": "IG 參考 3",
+          "url": "https://www.instagram.com/p/DO57Z5CDK2O/"
+        },
+        {
+          "label": "IG 參考 4",
+          "url": "https://www.instagram.com/p/DO57GdVDH4e/"
+        }
+      ],
+      "entries": [
+        {
+          "id": "ikea-price-tag",
+          "brand": "IKEA",
+          "title": "價格標籤系列",
+          "kind": "campaign",
+          "tags": [
+            "品牌符號",
+            "生活轉捩點"
+          ],
+          "note": "透過讓 IKEA 代表性的『價格標籤』這項簡單的元素成為敘事核心，我們不僅能捕捉生活中轉變發生的時刻，也能展現 IKEA 如何陪伴並支持消費者度過這些生活轉捩點。",
+          "links": [
+            {
+              "label": "WOWLAVIE 報導",
+              "url": "https://www.wowlavie.com/article/260027020"
+            }
+          ]
+        },
+        {
+          "id": "ikea-afford-it",
+          "brand": "IKEA",
+          "title": "Don’t worry, you can afford it.",
+          "kind": "campaign",
+          "tags": [
+            "價格訴求",
+            "幽默"
+          ],
+          "note": "",
+          "links": []
+        },
+        {
+          "id": "burger-king-proper-dining",
+          "brand": "漢堡王",
+          "title": "Proper Dining",
+          "kind": "campaign",
+          "tags": [
+            "反差",
+            "後疫情"
+          ],
+          "note": "名為「正式」的廣告卻展現用餐的輕鬆一面，也是後疫情時代的新飲食精神。",
+          "links": []
+        },
+        {
+          "id": "foodpanda-moving-orders",
+          "brand": "foodpanda",
+          "title": "Moving Orders",
+          "kind": "campaign",
+          "tags": [
+            "幽默",
+            "外送"
+          ],
+          "note": "幽默展現外送服務的便利。",
+          "links": []
+        },
+        {
+          "id": "canon-fathers-day",
+          "brand": "Canon",
+          "title": "國際父親節",
+          "kind": "campaign",
+          "tags": [
+            "節慶",
+            "UGC"
+          ],
+          "note": "Canon 推出一系列由爸爸拍攝孩子們照片的宣傳企劃。",
+          "links": []
+        },
+        {
+          "id": "kitkat-offline-pack",
+          "brand": "KitKat",
+          "title": "斷網包裝：迷你手機監獄",
+          "kind": "packaging",
+          "tags": [
+            "包裝",
+            "Have a Break",
+            "數位排毒"
+          ],
+          "note": "以經典標語 Have a Break 為發想，號召人們把手機裝袋、暫時離線休息一下。",
+          "detail": "奧美以「法拉第籠」為概念設計：包裝由銅、鎳、聚酯纖維和金屬導電層四層材料製成，加上精密封口，能隔絕網路、藍牙與電信訊號，把手機關進一座「迷你手機監獄」。",
+          "links": []
+        }
+      ]
+    },
+    {
+      "id": "2026-02-13",
+      "date": "2026-02-13",
+      "entries": [
+        {
+          "id": "vogue-gen-z-funnel",
+          "brand": "Vogue Business",
+          "title": "Gen Z broke the marketing funnel (part II): What now?",
+          "kind": "article",
+          "tags": [
+            "Gen Z",
+            "行銷漏斗"
+          ],
+          "note": "",
+          "links": [
+            {
+              "label": "閱讀文章",
+              "url": "https://www.vogue.com/article/gen-z-broke-the-marketing-funnel-part-ii-what-now"
+            }
+          ]
+        },
+        {
+          "id": "joguman",
+          "brand": "Joguman",
+          "title": "品牌官網",
+          "kind": "web",
+          "tags": [
+            "網站設計"
+          ],
+          "note": "",
+          "links": [
+            {
+              "label": "看網站",
+              "url": "https://en.joguman.com/home/"
+            }
+          ]
+        },
+        {
+          "id": "kakao-impact-aicon",
+          "brand": "kakao impact",
+          "title": "AICON 活動頁面",
+          "kind": "web",
+          "tags": [
+            "網站設計",
+            "活動頁",
+            "韓國"
+          ],
+          "note": "",
+          "links": [
+            {
+              "label": "看活動頁",
+              "url": "https://aicon.kakaoimpact.org/"
+            }
+          ]
+        },
+        {
+          "id": "tutu-school",
+          "brand": "tutu school",
+          "title": "舞蹈教室 Landing Page",
+          "kind": "web",
+          "tags": [
+            "網站設計",
+            "Landing page"
+          ],
+          "note": "",
+          "links": [
+            {
+              "label": "看網站",
+              "url": "https://tutuschool.com/"
+            }
+          ]
+        },
+        {
+          "id": "duolingo-social",
+          "brand": "Duolingo",
+          "title": "社群短影音",
+          "kind": "social",
+          "tags": [
+            "TikTok",
+            "梗",
+            "Stranger Things"
+          ],
+          "note": "",
+          "links": [
+            {
+              "label": "Duolingo 德國 TikTok",
+              "url": "https://www.tiktok.com/@duolingodeutschland/video/7577425144767991062"
+            },
+            {
+              "label": "Don’t be like papa（Facebook）",
+              "url": "https://www.facebook.com/duolingoenglishtest/videos/dont-be-like-papa-duolingo-englishtest-studyabroad-strangerthings/1991107098347668/"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
