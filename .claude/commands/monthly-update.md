@@ -22,7 +22,7 @@ description: 每月同步月會簡報到網站，並整理下個月的候選廣�
    - 連結去掉 `utm_`、`__cf_chl`、`fbclid` 等追蹤參數，Google 轉址（`google.com/url?q=`）要還原成原始網址。
    - 同一個廣告在簡報佔多頁（例如多張截圖）時合併成一筆。
    - 無法判斷屬於哪則廣告的零散連結，放在該期的 `links`。
-   - 依 `CLAUDE.md` 的「縮圖」規則找 `image`。簡報上沒有連結的廣告，先搜尋一篇可靠的報導，把它加進 `links`，再取它的 og:image。
+   - 依 `CLAUDE.md` 的「影片」規則找 `youtube`，找不到再依「縮圖」規則找 `image`。簡報上沒有連結的廣告，先搜尋一篇可靠的報導，把它加進 `links`，再取它的 og:image。
 5. 新期數插在 `issues` 陣列最前面（由新到舊）。
 6. 簡報讀不到（權限、頁面錯誤）時，不要猜內容；略過 A，在最後的回報中說明。
 
@@ -37,7 +37,7 @@ description: 每月同步月會簡報到網站，並整理下個月的候選廣�
 3. 挑 5 則，標準參考 `CLAUDE.md` 的「選片口味」。每一則都要 WebFetch 原始文章確認品牌、代理商、市場與具體做法，查不到的欄位就留空，不要編。
 4. 不要挑 `ads.json` 已經有的。
 5. `why` 寫一兩句：為什麼值得在月會分享，能接上之前哪一則就點名。
-6. 每則都依 `CLAUDE.md` 的「縮圖」規則附上 `image`，WebFetch 原始文章時順便逐字複製 og:image。
+6. 每則都依 `CLAUDE.md` 的「影片」與「縮圖」規則附上 `youtube` 或 `image`；WebFetch 原始文章時，順便逐字複製 og:image 和內嵌的 YouTube 網址。
 7. 覆寫 `picks.json`：`month` 為本月 `YYYY-MM`，`generatedAt` 為今天。
 
 ## C. 驗證與發佈

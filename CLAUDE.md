@@ -23,18 +23,27 @@ Tsan 每個月在團隊月會分享有趣廣告，這個 React + Vite 網站把�
   "note": "作者自己的觀點",            // 只放 Tsan 寫的話；沒有就空字串
   "detail": "背景與數據（選填）",       // 用自己的話寫，不照抄來源
   "image": "https://...",              // 縮圖（選填），直接引用外部圖片，規則見下
+  "youtube": "FT0-4wSIMj0",            // YouTube 影片 ID（選填），有的話網站會內嵌播放並取代 image
   "links": [{ "label": "Nestlé 新聞稿", "url": "https://..." }]
 }
 ```
 
+### 影片（`youtube`）
+
+網站會先顯示影片縮圖，點了才載入 YouTube 播放器。每則都先用 WebSearch（`allowed_domains: ["youtube.com"]`）找影片，只收以下幾種：
+
+- 品牌或代理商發布的正式廣告片。
+- 參賽用的案例影片（標題常見「(Case Study)」）。
+
+不收新聞台報導、反應影片、教學影片或標題對不上的影片。拿不準就不填，改用 `image`。欄位只填 11 碼 ID，不填完整網址。
+
 ### 縮圖（`image`）
 
-網站直接引用外部圖片，不下載到 repo。圖片載入失敗時前端會自動隱藏，所以找不到就省略欄位，不要填猜的網址。依序選擇：
+沒有 `youtube` 時才會顯示。網站直接引用外部圖片，不下載到 repo。圖片載入失敗時前端會自動隱藏，所以找不到就省略欄位，不要填猜的網址。依序選擇：
 
-1. 有 YouTube 影片 → `https://i.ytimg.com/vi/<影片ID>/hqdefault.jpg`（最穩定）。
-2. 來源報導的 `og:image`：WebFetch 時請它「逐字複製 meta og:image」，不可自行組網址。品牌官網、Campaigns of the World、LBB、Ads of the World 通常都有。
-3. `kind` 為 `web` 的網站作品 → 用網站即時截圖：`https://s.wordpress.com/mshots/v1/<URL encode 後的網址>?w=800&h=500`。
-4. 跳過：站台 logo、通用分享圖（例如 D&AD 的 `social.jpg`）、Instagram／TikTok／Facebook 的 CDN 圖（網址會過期）。
+1. 來源報導的 `og:image`：WebFetch 時請它「逐字複製 meta og:image」，不可自行組網址。品牌官網、Campaigns of the World、LBB、Ads of the World 通常都有。
+2. `kind` 為 `web` 的網站作品 → 用網站即時截圖：`https://s.wordpress.com/mshots/v1/<URL encode 後的網址>?w=800&h=500`。
+3. 跳過：站台 logo、通用分享圖（例如 D&AD 的 `social.jpg`）、Instagram／TikTok／Facebook 的 CDN 圖（網址會過期）。
 
 縮圖會連到 `links` 的第一個連結，所以第一個連結要放最主要的來源。
 

@@ -1,4 +1,4 @@
-import { useId, useState } from 'react'
+import { useEffect, useId, useRef, useState } from 'react'
 import { KIND_LABEL, type Entry, type Pick } from '../types'
 
 interface Props {
@@ -34,17 +34,69 @@ function Thumb({ src, alt, href }: { src: string; alt: string; href?: string }) 
   )
 }
 
+/** 先顯示 YouTube 縮圖，點了才載入播放器，避免一頁載入一堆 iframe */
+function VideoThumb({ id, label, onPlay }: { id: string; label: string; onPlay: () => void }) {
+  return (
+    <button type="button" className="entry__video-btn" onClick={onPlay} aria-label={`播放影片：${label}`}>
+      <img
+        className="entry__thumb entry__thumb--video"
+        src={`https://i.ytimg.com/vi/${id}/hqdefault.jpg`}
+        alt=""
+        loading="lazy"
+        decoding="async"
+      />
+      <span className="entry__play" aria-hidden="true">
+        <svg viewBox="0 0 24 24" width="22" height="22">
+          <path d="M8 5.5v13l11-6.5z" fill="currentColor" />
+        </svg>
+      </span>
+    </button>
+  )
+}
+
+function Player({ id, label, onClose }: { id: string; label: string; onClose: () => void }) {
+  const closeRef = useRef<HTMLButtonElement>(null)
+  useEffect(() => {
+    closeRef.current?.focus()
+  }, [])
+  return (
+    <div className="entry__player">
+      <iframe
+        src={`https://www.youtube-nocookie.com/embed/${id}?autoplay=1&rel=0&playsinline=1`}
+        title={label}
+        allow="autoplay; encrypted-media; picture-in-picture; fullscreen"
+        allowFullScreen
+      />
+      <div className="entry__player-bar">
+        <a href={`https://www.youtube.com/watch?v=${id}`} target="_blank" rel="noreferrer">
+          在 YouTube 開啟
+        </a>
+        <button ref={closeRef} type="button" className="linklike" onClick={onClose}>
+          關閉影片
+        </button>
+      </div>
+    </div>
+  )
+}
+
 export function EntryRow({ entry, onTagClick }: Props) {
   const [open, setOpen] = useState(false)
+  const [playing, setPlaying] = useState(false)
   const detailId = useId()
   const pick = isPick(entry)
   const hasMore = Boolean(entry.detail) || entry.links.length > 0
+  const label = `${entry.brand}：${entry.title}`
 
   return (
     <article className={pick ? 'entry entry--pick' : 'entry'}>
+      {entry.youtube && playing && (
+        <Player id={entry.youtube} label={label} onClose={() => setPlaying(false)} />
+      )}
       <div className="entry__head">
-        {entry.image && (
-          <Thumb src={entry.image} alt={`${entry.brand}：${entry.title}`} href={entry.links[0]?.url} />
+        {entry.youtube ? (
+          !playing && <VideoThumb id={entry.youtube} label={label} onPlay={() => setPlaying(true)} />
+        ) : (
+          entry.image && <Thumb src={entry.image} alt={label} href={entry.links[0]?.url} />
         )}
         <h3 className="entry__brand">{entry.brand}</h3>
         <p className="entry__title">

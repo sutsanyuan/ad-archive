@@ -17,6 +17,8 @@ export interface Entry {
   detail?: string
   /** 縮圖網址，直接引用外部圖片（og:image、YouTube 縮圖或網站截圖） */
   image?: string
+  /** YouTube 影片 ID（11 碼），有的話以影片取代縮圖 */
+  youtube?: string
   links: LinkRef[]
 }
 
