@@ -62,7 +62,7 @@ function Player({ id, label, onClose }: { id: string; label: string; onClose: ()
   return (
     <div className="entry__player">
       <iframe
-        src={`https://www.youtube-nocookie.com/embed/${id}?autoplay=1&rel=0&playsinline=1`}
+        src={`https://www.youtube.com/embed/${id}?autoplay=1&rel=0&playsinline=1`}
         title={label}
         allow="autoplay; encrypted-media; picture-in-picture; fullscreen"
         allowFullScreen
