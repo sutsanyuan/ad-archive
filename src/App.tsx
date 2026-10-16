@@ -15,13 +15,12 @@ function formatDate(iso: string) {
   return { year: y, md: `${m}.${d}` }
 }
 
-function matches(e: Entry, q: string, kind: Kind | 'all', tag: string | null) {
+function matches(e: Entry, q: string, kind: Kind | 'all', tag: string | null, onlyClaude: boolean) {
   if (kind !== 'all' && e.kind !== kind) return false
   if (tag && !e.tags.includes(tag)) return false
+  if (onlyClaude && !e.by) return false
   if (!q) return true
-  const hay = [e.brand, e.title, e.note, e.detail ?? '', e.why ?? '', e.agency ?? '', ...e.tags]
-    .join(' ')
-    .toLowerCase()
+  const hay = [e.brand, e.title, e.note, e.detail ?? '', e.why ?? '', e.agency ?? '', ...e.tags].join(' ').toLowerCase()
   return hay.includes(q.toLowerCase())
 }
 
@@ -30,6 +29,7 @@ export default function App() {
   const [query, setQuery] = useState('')
   const [kind, setKind] = useState<Kind | 'all'>('all')
   const [tag, setTag] = useState<string | null>(null)
+  const [onlyClaude, setOnlyClaude] = useState(false)
 
   // 登入與編輯狀態
   const [canLogin, setCanLogin] = useState(false)
@@ -86,17 +86,21 @@ export default function App() {
   const filteredIssues = useMemo(
     () =>
       archive.issues
-        .map((i) => ({ ...i, entries: i.entries.filter((e) => matches(e, query, kind, tag)) }))
+        .map((i) => ({
+          ...i,
+          entries: i.entries.filter((e) => matches(e, query, kind, tag, onlyClaude)),
+        }))
         .filter((i) => i.entries.length > 0),
-    [archive, query, kind, tag],
+    [archive, query, kind, tag, onlyClaude],
   )
   const shown = filteredIssues.reduce((n, i) => n + i.entries.length, 0)
-  const filtering = query !== '' || kind !== 'all' || tag !== null
+  const filtering = query !== '' || kind !== 'all' || tag !== null || onlyClaude !== false
 
   function clearFilters() {
     setQuery('')
     setKind('all')
     setTag(null)
+    setOnlyClaude(false)
   }
 
   return (
@@ -129,7 +133,8 @@ export default function App() {
           </h1>
           <p className="masthead__lede">
             每個月在團隊月會分享的廣告、包裝和網站，連同它好在哪裡。標著「Claude 挑選」的是 Claude
-            每月幫我找來的。目前收了 {archive.issues.length} 期、{all.length} 則，來自 {brands} 個品牌。
+            每月幫我找來的。目前收了 {archive.issues.length} 期、
+            {all.length} 則，來自 {brands} 個品牌。
           </p>
         </header>
 
@@ -153,6 +158,12 @@ export default function App() {
               </button>
             ))}
           </div>
+          <div className="kinds">
+            <button type="button" aria-pressed={onlyClaude} onClick={() => setOnlyClaude(!onlyClaude)}>
+              Claude 挑選
+            </button>
+          </div>
+
           {filtering && (
             <p className="filters__status" role="status">
               {tag && (
@@ -204,7 +215,12 @@ export default function App() {
                       <button
                         type="button"
                         className="linklike issue__add"
-                        onClick={() => setEditing({ mode: 'create', issueDate: issue.date })}
+                        onClick={() =>
+                          setEditing({
+                            mode: 'create',
+                            issueDate: issue.date,
+                          })
+                        }
                       >
                         在這期新增
                       </button>
@@ -217,7 +233,13 @@ export default function App() {
                         entry={e}
                         admin={admin}
                         onTagClick={setTag}
-                        onEdit={() => setEditing({ mode: 'update', issueDate: issue.date, entry: e })}
+                        onEdit={() =>
+                          setEditing({
+                            mode: 'update',
+                            issueDate: issue.date,
+                            entry: e,
+                          })
+                        }
                         onDelete={() => onDelete(e)}
                       />
                     ))}
