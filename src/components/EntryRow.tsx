@@ -1,13 +1,12 @@
 import { useEffect, useId, useRef, useState } from 'react'
-import { KIND_LABEL, type Entry, type Pick } from '../types'
+import { KIND_LABEL, type Entry } from '../types'
 
 interface Props {
-  entry: Entry | Pick
+  entry: Entry
+  admin?: boolean
   onTagClick?: (tag: string) => void
-}
-
-function isPick(e: Entry | Pick): e is Pick {
-  return 'why' in e
+  onEdit?: () => void
+  onDelete?: () => Promise<void>
 }
 
 function Thumb({ src, alt, href }: { src: string; alt: string; href?: string }) {
@@ -79,45 +78,95 @@ function Player({ id, label, onClose }: { id: string; label: string; onClose: ()
   )
 }
 
-export function EntryRow({ entry, onTagClick }: Props) {
+/** 刪除要按兩次：先按「刪除」，再按「確定刪除」 */
+function AdminActions({ onEdit, onDelete }: { onEdit?: () => void; onDelete?: () => Promise<void> }) {
+  const [confirming, setConfirming] = useState(false)
+  const [busy, setBusy] = useState(false)
+  const confirmRef = useRef<HTMLButtonElement>(null)
+
+  useEffect(() => {
+    if (confirming) confirmRef.current?.focus()
+  }, [confirming])
+
+  if (confirming) {
+    return (
+      <div className="entry__admin" role="group" aria-label="確認刪除">
+        <button
+          ref={confirmRef}
+          type="button"
+          className="btn btn--danger btn--small"
+          disabled={busy}
+          onClick={async () => {
+            setBusy(true)
+            try {
+              await onDelete?.()
+            } finally {
+              setBusy(false)
+              setConfirming(false)
+            }
+          }}
+        >
+          {busy ? '刪除中…' : '確定刪除'}
+        </button>
+        <button type="button" className="btn btn--ghost btn--small" disabled={busy} onClick={() => setConfirming(false)}>
+          取消
+        </button>
+      </div>
+    )
+  }
+  return (
+    <div className="entry__admin">
+      <button type="button" className="btn btn--ghost btn--small" onClick={onEdit}>
+        編輯
+      </button>
+      <button type="button" className="btn btn--ghost btn--small" onClick={() => setConfirming(true)}>
+        刪除
+      </button>
+    </div>
+  )
+}
+
+export function EntryRow({ entry, admin, onTagClick, onEdit, onDelete }: Props) {
   const [open, setOpen] = useState(false)
   const [playing, setPlaying] = useState(false)
   const detailId = useId()
-  const pick = isPick(entry)
-  const hasMore = Boolean(entry.detail) || entry.links.length > 0
   const label = `${entry.brand}：${entry.title}`
+  const byClaude = entry.by === 'claude'
+
+  // 有自己的觀點就顯示觀點；Claude 挑的還沒寫觀點時，改顯示 Claude 寫的介紹
+  const showDetailAsMain = !entry.note && byClaude && Boolean(entry.detail)
+  const mainText = entry.note || (showDetailAsMain ? entry.detail : '')
+  const moreDetail = showDetailAsMain ? undefined : entry.detail
+  const hasMore = Boolean(moreDetail) || entry.links.length > 0
+  const credit = [entry.agency, entry.market].filter(Boolean).join('／')
 
   return (
-    <article className={pick ? 'entry entry--pick' : 'entry'}>
-      {entry.youtube && playing && (
-        <Player id={entry.youtube} label={label} onClose={() => setPlaying(false)} />
-      )}
+    <article className={byClaude ? 'entry entry--claude' : 'entry'}>
+      {entry.youtube && playing && <Player id={entry.youtube} label={label} onClose={() => setPlaying(false)} />}
       <div className="entry__head">
-        {entry.youtube ? (
-          !playing && <VideoThumb id={entry.youtube} label={label} onPlay={() => setPlaying(true)} />
-        ) : (
-          entry.image && <Thumb src={entry.image} alt={label} href={entry.links[0]?.url} />
-        )}
+        {entry.youtube
+          ? !playing && <VideoThumb id={entry.youtube} label={label} onPlay={() => setPlaying(true)} />
+          : entry.image && <Thumb src={entry.image} alt={label} href={entry.links[0]?.url} />}
         <h3 className="entry__brand">{entry.brand}</h3>
         <p className="entry__title">
           {entry.title}
-          <span className="entry__kind">{KIND_LABEL[entry.kind]}</span>
+          <span className="entry__kind">
+            {KIND_LABEL[entry.kind]}
+            {byClaude && <span className="entry__by">Claude 挑選</span>}
+          </span>
         </p>
-        {pick && (entry.agency || entry.market) && (
-          <p className="entry__credit">
-            {[entry.agency, entry.market].filter(Boolean).join('／')}
-          </p>
-        )}
+        {credit && <p className="entry__credit">{credit}</p>}
+        {admin && <AdminActions onEdit={onEdit} onDelete={onDelete} />}
       </div>
 
       <div className="entry__body">
-        {entry.note ? (
-          <p className="entry__note">{entry.note}</p>
+        {mainText ? (
+          <p className={showDetailAsMain ? 'entry__note entry__note--claude' : 'entry__note'}>{mainText}</p>
         ) : (
-          <p className="entry__note entry__note--empty">還沒寫觀點</p>
+          admin && <p className="entry__note entry__note--empty">還沒寫觀點</p>
         )}
 
-        {pick && <p className="entry__why">{entry.why}</p>}
+        {byClaude && entry.why && <p className="entry__why">{entry.why}</p>}
 
         <ul className="entry__tags" aria-label="標籤">
           {entry.tags.map((t) => (
@@ -138,10 +187,10 @@ export function EntryRow({ entry, onTagClick }: Props) {
               aria-controls={detailId}
               onClick={() => setOpen((v) => !v)}
             >
-              {open ? '收起' : entry.detail ? '看背景與連結' : '看連結'}
+              {open ? '收起' : moreDetail ? '看背景與連結' : '看連結'}
             </button>
-            <div id={detailId} className="entry__more" data-open={open} hidden={!open}>
-              {entry.detail && <p>{entry.detail}</p>}
+            <div id={detailId} className="entry__more" hidden={!open}>
+              {moreDetail && <p>{moreDetail}</p>}
               {entry.links.length > 0 && (
                 <ul className="entry__links">
                   {entry.links.map((l) => (

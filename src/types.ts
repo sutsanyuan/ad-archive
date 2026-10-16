@@ -11,11 +11,17 @@ export interface Entry {
   title: string
   kind: Kind
   tags: string[]
-  /** 我自己的觀點：為什麼覺得有趣 */
+  /** 'claude' 表示由 Claude 每月挑選；沒有這個欄位就是 Tsan 自己分享的 */
+  by?: 'claude'
+  /** Tsan 自己的觀點；空字串代表還沒寫 */
   note: string
-  /** 背景資料、數據 */
+  /** 背景資料、做法與數據 */
   detail?: string
-  /** 縮圖網址，直接引用外部圖片（og:image、YouTube 縮圖或網站截圖） */
+  /** Claude 推薦的理由，可以怎麼接上之前分享過的東西 */
+  why?: string
+  agency?: string
+  market?: string
+  /** 縮圖網址，直接引用外部圖片（og:image 或網站截圖） */
   image?: string
   /** YouTube 影片 ID（11 碼），有的話以影片取代縮圖 */
   youtube?: string
@@ -24,7 +30,7 @@ export interface Entry {
 
 export interface Issue {
   id: string
-  /** YYYY-MM-DD，月會日期 */
+  /** YYYY-MM-DD */
   date: string
   links?: LinkRef[]
   entries: Entry[]
@@ -33,19 +39,6 @@ export interface Issue {
 export interface Archive {
   source: string
   issues: Issue[]
-}
-
-export interface Pick extends Entry {
-  agency?: string
-  market?: string
-  /** Claude 推薦的理由 / 可以怎麼接上之前分享過的東西 */
-  why: string
-}
-
-export interface Picks {
-  month: string
-  generatedAt: string
-  picks: Pick[]
 }
 
 export const KIND_LABEL: Record<Kind, string> = {

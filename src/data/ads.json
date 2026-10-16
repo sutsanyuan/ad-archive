@@ -2,6 +2,130 @@
   "source": "https://docs.google.com/presentation/d/14acsOEM59zCAKZ5o9wHiNcw_E5eMd_PMrWcRDndEyq4/edit",
   "issues": [
     {
+      "id": "2026-10-16",
+      "date": "2026-10-16",
+      "entries": [
+        {
+          "id": "pizza-hut-pizza-platform",
+          "brand": "Pizza Hut",
+          "title": "Pizza Platform",
+          "kind": "packaging",
+          "tags": [
+            "包裝",
+            "解決真實痛點",
+            "音樂祭"
+          ],
+          "by": "claude",
+          "note": "",
+          "detail": "身高不到 165 公分的人在演唱會常常看不到舞台。披薩盒內部加強結構，吃完摺起來就是一個可承重約 105 公斤的踩台，在音樂祭期間和主辦方合作發放。",
+          "why": "和 KitKat 斷網包裝同一路：包裝本身就是廣告，產品用完之後還有第二個用途。",
+          "agency": "BBA Ecuador",
+          "market": "厄瓜多",
+          "image": "https://campaignsoftheworld.com/wp-content/uploads/2026/09/pizza-hut-pizza-platform-campaign.webp",
+          "links": [
+            {
+              "label": "Campaigns of the World",
+              "url": "https://campaignsoftheworld.com/ooh-campaigns/pizza-hut-pizza-platform/"
+            }
+          ]
+        },
+        {
+          "id": "birra-moretti-stanley-tucci",
+          "brand": "Birra Moretti",
+          "title": "Too Busy Enjoying Life × Stanley Tucci",
+          "kind": "campaign",
+          "tags": [
+            "名人",
+            "後設廣告",
+            "直式影片"
+          ],
+          "by": "claude",
+          "note": "",
+          "detail": "精緻的啤酒廣告現場都準備好了，主角 Stanley Tucci 卻沒來，他忙著跟朋友吃飯喝 Moretti，只傳了一支手機直拍影片回來。",
+          "why": "可以接著 De'Longhi × Brad Pitt 講：名人不是拿來背書，而是拿來開廣告格式本身的玩笑。System1 測試 4.3 星，高於英國啤酒類平均的 3.1 星。",
+          "agency": "Lucky Generals",
+          "market": "英國",
+          "youtube": "AJ4sPlwXtMc",
+          "links": [
+            {
+              "label": "System1 Ad of the Week",
+              "url": "https://system1group.com/ad-of-the-week/birra-moretti-and-stanley-tucci-flip-the-beer-ad-script"
+            }
+          ]
+        },
+        {
+          "id": "ecover-unwashables",
+          "brand": "Ecover",
+          "title": "The Unwashables",
+          "kind": "campaign",
+          "tags": [
+            "反差",
+            "限量商品",
+            "永續"
+          ],
+          "by": "claude",
+          "note": "",
+          "detail": "洗衣精品牌推出「不准洗」的幸運 T 恤：分別用四葉草染料、生鏽馬蹄鐵、許願池的水和隕石粉末製成，洗標直接畫一個打叉的洗衣盆。",
+          "why": "洗衣品牌叫你別洗衣服，反差夠強；背後的訊息是讓衣服穿久一點。他們的調查說 30% 英國人不洗自己的幸運衣。",
+          "agency": "Uncommon Creative Studio",
+          "market": "英國",
+          "image": "https://campaignsoftheworld.com/wp-content/uploads/2026/10/ecover-the-unwashables-lucky-t-shirts.webp",
+          "links": [
+            {
+              "label": "Campaigns of the World",
+              "url": "https://campaignsoftheworld.com/digital-campaigns/ecover-the-unwashables/"
+            }
+          ]
+        },
+        {
+          "id": "gymnation-worry-bench",
+          "brand": "GymNation",
+          "title": "Worry Bench",
+          "kind": "campaign",
+          "tags": [
+            "世界心理健康日",
+            "場域即媒體",
+            "會員調查"
+          ],
+          "by": "claude",
+          "note": "",
+          "detail": "把 2,000 名會員調查出來的煩惱刻在槓片上：20 公斤是「未來」和「冒牌者症候群」，5 公斤是「房租」、「收件匣」和「滑手機停不下來」。",
+          "why": "媒體就是器材本身，會員在訓練時自然看到；煩惱的重量分級本身就是一個好分享的梗。",
+          "market": "中東（阿聯、沙烏地、巴林）",
+          "image": "https://campaignsoftheworld.com/wp-content/uploads/2026/10/GymNation_Worry_Bench_featured.webp",
+          "links": [
+            {
+              "label": "Campaigns of the World",
+              "url": "https://campaignsoftheworld.com/ooh-campaigns/gymnation-worry-bench/"
+            }
+          ]
+        },
+        {
+          "id": "lifeline-self-inflating-tote",
+          "brand": "LIFELINE",
+          "title": "The Self-Inflating Tote",
+          "kind": "packaging",
+          "tags": [
+            "氣候議題",
+            "產品即訊息",
+            "概念作品"
+          ],
+          "by": "claude",
+          "note": "",
+          "detail": "一個看起來普通的橘色托特包，拉開拉鍊套上頭、拉一下背帶，大約 15 秒就充氣變成救生衣。在紐約氣候週發表，回應城市淹水問題。",
+          "why": "比較偏概念作品而非商業廣告，但很適合當「把議題做成一個物件」的例子。",
+          "market": "紐約",
+          "image": "https://campaignsoftheworld.com/wp-content/uploads/2026/10/lifeline-self-inflating-tote-life-jacket.-3.webp",
+          "links": [
+            {
+              "label": "Campaigns of the World",
+              "url": "https://campaignsoftheworld.com/ooh-campaigns/lifeline-self-inflating-tote/"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "id": "2026-09-11",
       "date": "2026-09-11",
       "entries": [
