@@ -15,6 +15,8 @@ export interface Entry {
   note: string
   /** 背景資料、數據 */
   detail?: string
+  /** 縮圖網址，直接引用外部圖片（og:image、YouTube 縮圖或網站截圖） */
+  image?: string
   links: LinkRef[]
 }
 

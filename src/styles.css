@@ -279,6 +279,22 @@ button {
   padding-top: 4px;
 }
 
+.entry__thumb-link {
+  display: block;
+  border-radius: 6px;
+}
+
+.entry__thumb {
+  display: block;
+  width: 100%;
+  max-width: 420px;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  margin-bottom: 14px;
+  border-radius: 6px;
+  background: color-mix(in srgb, var(--ink) 8%, transparent);
+}
+
 .entry__brand {
   margin: 0;
   font-family: var(--display);

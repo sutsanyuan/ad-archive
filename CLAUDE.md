@@ -22,9 +22,21 @@ Tsan 每個月在團隊月會分享有趣廣告，這個 React + Vite 網站把�
   "tags": ["危機變轉機", "互動遊戲"], // 2–4 個，中文為主，專有名詞可用英文
   "note": "作者自己的觀點",            // 只放 Tsan 寫的話；沒有就空字串
   "detail": "背景與數據（選填）",       // 用自己的話寫，不照抄來源
+  "image": "https://...",              // 縮圖（選填），直接引用外部圖片，規則見下
   "links": [{ "label": "Nestlé 新聞稿", "url": "https://..." }]
 }
 ```
+
+### 縮圖（`image`）
+
+網站直接引用外部圖片，不下載到 repo。圖片載入失敗時前端會自動隱藏，所以找不到就省略欄位，不要填猜的網址。依序選擇：
+
+1. 有 YouTube 影片 → `https://i.ytimg.com/vi/<影片ID>/hqdefault.jpg`（最穩定）。
+2. 來源報導的 `og:image`：WebFetch 時請它「逐字複製 meta og:image」，不可自行組網址。品牌官網、Campaigns of the World、LBB、Ads of the World 通常都有。
+3. `kind` 為 `web` 的網站作品 → 用網站即時截圖：`https://s.wordpress.com/mshots/v1/<URL encode 後的網址>?w=800&h=500`。
+4. 跳過：站台 logo、通用分享圖（例如 D&AD 的 `social.jpg`）、Instagram／TikTok／Facebook 的 CDN 圖（網址會過期）。
+
+縮圖會連到 `links` 的第一個連結，所以第一個連結要放最主要的來源。
 
 候選（picks）多了 `agency`、`market`（選填，查不到就省略）和 `why`（必填）。
 

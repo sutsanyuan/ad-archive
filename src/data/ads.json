@@ -16,6 +16,7 @@
             "Cannes Lions"
           ],
           "note": "真的有 12 噸 KitKat、約 41 萬條巧克力在運輸途中被偷。KitKat 沒有把它當成危機，而是直接把整件事情做成一場「找巧克力的真實犯罪遊戲」。消費者可以輸入自己手上的 KitKat 批號，查自己的巧克力是不是來自那批失竊貨物。最後甚至有真實線索透過這個活動被找到。",
+          "image": "https://www.nestle.com/sites/default/files/2026-07/kitkat-heist-feed1.jpg",
           "links": [
             {
               "label": "Nestlé 新聞稿",
@@ -35,7 +36,13 @@
           ],
           "note": "現在 premium brand 的產品廣告，已經不一定要一直強調產品功能，而是先創造一個值得看的 entertainment，再讓產品進入故事。",
           "detail": "LOLA Madrid 操刀，由 Spike Jonze 執導。創意長的說法是：Brad Pitt 本身就夠有魅力，拿他開玩笑反而讓他更討喜。",
-          "links": []
+          "image": "https://d3q27bh1u24u2o.cloudfront.net/resized/1200/news_hero/2026-09/Brad-Pitt-Delonghi.ji4Tt_hz.jpg",
+          "links": [
+            {
+              "label": "LBB 報導",
+              "url": "https://lbbonline.com/news/Brad-Pitt-Spike-Jonze-DeLonghi-LOLA"
+            }
+          ]
         },
         {
           "id": "uts-year-that-made-me",
@@ -49,7 +56,13 @@
           ],
           "note": "它把教育廣告從「我們提供什麼」轉成「學生最後變成什麼」。",
           "detail": "整支 campaign 以學生自己拍的內容為素材剪成。",
-          "links": []
+          "image": "https://www.bandt.com.au/information/uploads/2026/09/UTS-The-Year-That-MAde-Me-scaled.jpg",
+          "links": [
+            {
+              "label": "B&T 報導",
+              "url": "https://www.bandt.com.au/uts-college-taps-its-students-to-send-in-real-footage-for-the-year-that-made-me-spot-via-the-core-agency/"
+            }
+          ]
         },
         {
           "id": "lego-everyone-wants-a-piece",
@@ -63,10 +76,15 @@
           ],
           "note": "IS that AI? → body doubles + CGI",
           "detail": "Messi、C 羅、Mbappé、Vinícius Jr. 同框，網友一度認定是 AI 生成，討論反而推著影片衝到約 3.14 億次觀看。LEGO 後來公開幕後：是替身拍攝再用 CGI 合成到同一個空間。網路上也冒出大量二創。",
+          "image": "https://www.lego.com/cdn/cs/aboutus/assets/blt3bd1b21f0a3e9d9d/AID262GLcbc2e2c2_LEGO_Editions_1HY26_Social_GWAP_4x5_Static.jpg?width=1200",
           "links": [
             {
               "label": "二創影片整理",
               "url": "https://pictame.com/en/discover/hashtag/2026-lego"
+            },
+            {
+              "label": "LEGO 官方新聞",
+              "url": "https://www.lego.com/aboutus/news/2026/april/lego-editions-wants-a-piece"
             }
           ]
         }
@@ -88,7 +106,13 @@
           ],
           "note": "把網路上的 Vaseline 偏方和分享偏方的創作者，直接變成正式產品線。",
           "detail": "共創產品在 TikTok 上市時，銷量比經典凡士林高出 466%，上市時每兩秒賣出一罐。跑者長年在長跑前抹凡士林防止乳頭磨破，於是 2026 年品牌乾脆成為倫敦馬拉松的「官方乳頭保護贊助商」，賽前賽中都提供產品。之後自發的用法分享貼文增加了 24%，等於用戶持續在幫品牌做產品研發。",
-          "links": []
+          "image": "https://d3q27bh1u24u2o.cloudfront.net/resized/1200/news/2026-04/3103x2.WtxvhiXW.png",
+          "links": [
+            {
+              "label": "LBB 報導",
+              "url": "https://lbbonline.com/news/Vaseline-The-Nipple-Sponsorship-2026-TCS-London-Marathon"
+            }
+          ]
         },
         {
           "id": "dove-real-reviews",
@@ -102,7 +126,13 @@
           ],
           "note": "敢公開好壞評價，反而換來信任。",
           "detail": "和 Reddit 合作，邀請網友毫無修飾地評論 Intensive Repair 10-in-1 髮膜，並承諾在取得同意後公開前 50 則，不管是好評還是負評。銷量比前一年成長超過一倍，活動期間成為美國最暢銷髮膜，累積超過 10 億次自然曝光，拿下 6 座獅子獎。",
-          "links": []
+          "image": "https://d3q27bh1u24u2o.cloudfront.net/resized/1200/news/2026-02/Dove.HGBHEcIV.png",
+          "links": [
+            {
+              "label": "LBB 報導",
+              "url": "https://lbbonline.com/news/Dove-Hair-Sponsors-Honesty-Over-Praise-DAVID-London"
+            }
+          ]
         },
         {
           "id": "cif-clean-my-name",
@@ -116,7 +146,13 @@
           ],
           "note": "清潔品牌幫你「洗清名字」。",
           "detail": "在巴西，負債常被說成「名字髒了」，影響超過 8,000 萬人。Cif 與巴西最大的債務協商平台 Serasa 合作，幫民眾償還部分債務，促成數百萬的債務重新協商，品牌銷量也跟著提升。",
-          "links": []
+          "image": "https://www.adsoftheworld.com/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBNU1PRXc9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--59a2bdab2f600211ff519a51db4b5e18e35bfc25/16x9_en.jpg",
+          "links": [
+            {
+              "label": "Ads of the World",
+              "url": "https://www.adsoftheworld.com/campaigns/clean-up-your-name"
+            }
+          ]
         }
       ]
     },
@@ -152,6 +188,7 @@
             "生活轉捩點"
           ],
           "note": "透過讓 IKEA 代表性的『價格標籤』這項簡單的元素成為敘事核心，我們不僅能捕捉生活中轉變發生的時刻，也能展現 IKEA 如何陪伴並支持消費者度過這些生活轉捩點。",
+          "image": "https://www.wowlavie.com/files/article/a2/27020/atl_m_27020_20260511105536_179.jpg",
           "links": [
             {
               "label": "WOWLAVIE 報導",
@@ -205,7 +242,13 @@
             "UGC"
           ],
           "note": "Canon 推出一系列由爸爸拍攝孩子們照片的宣傳企劃。",
-          "links": []
+          "image": "https://campaignme.com/wp-content/uploads/2024/06/Canon_FathersDay_IceCream_Redbar_Logo.jpg",
+          "links": [
+            {
+              "label": "Campaign Middle East",
+              "url": "https://campaignme.com/canon-celebrates-fathers-day-with-heartwarming-campaign"
+            }
+          ]
         },
         {
           "id": "kitkat-offline-pack",
@@ -219,7 +262,13 @@
           ],
           "note": "以經典標語 Have a Break 為發想，號召人們把手機裝袋、暫時離線休息一下。",
           "detail": "奧美以「法拉第籠」為概念設計：包裝由銅、鎳、聚酯纖維和金屬導電層四層材料製成，加上精密封口，能隔絕網路、藍牙與電信訊號，把手機關進一座「迷你手機監獄」。",
-          "links": []
+          "image": "https://propakistani.pk/wp-content/uploads/2026/06/KitKat-Wrapper.jpg",
+          "links": [
+            {
+              "label": "ProPakistani 報導",
+              "url": "https://propakistani.pk/2026/06/22/this-kitkat-wrapper-can-stop-your-phone-addiction-and-doomscrolling"
+            }
+          ]
         }
       ]
     },
@@ -253,6 +302,7 @@
             "網站設計"
           ],
           "note": "",
+          "image": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fen.joguman.com%2Fhome%2F?w=800&h=500",
           "links": [
             {
               "label": "看網站",
@@ -271,6 +321,7 @@
             "韓國"
           ],
           "note": "",
+          "image": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Faicon.kakaoimpact.org%2F?w=800&h=500",
           "links": [
             {
               "label": "看活動頁",
@@ -288,6 +339,7 @@
             "Landing page"
           ],
           "note": "",
+          "image": "https://s.wordpress.com/mshots/v1/https%3A%2F%2Ftutuschool.com%2F?w=800&h=500",
           "links": [
             {
               "label": "看網站",

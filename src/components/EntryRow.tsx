@@ -10,6 +10,30 @@ function isPick(e: Entry | Pick): e is Pick {
   return 'why' in e
 }
 
+function Thumb({ src, alt, href }: { src: string; alt: string; href?: string }) {
+  // 外部圖片可能被移除或擋外連，載入失敗就整個不顯示，避免破圖
+  const [failed, setFailed] = useState(false)
+  if (failed) return null
+  const img = (
+    <img
+      className="entry__thumb"
+      src={src}
+      alt={alt}
+      loading="lazy"
+      decoding="async"
+      referrerPolicy="no-referrer"
+      onError={() => setFailed(true)}
+    />
+  )
+  return href ? (
+    <a className="entry__thumb-link" href={href} target="_blank" rel="noreferrer">
+      {img}
+    </a>
+  ) : (
+    img
+  )
+}
+
 export function EntryRow({ entry, onTagClick }: Props) {
   const [open, setOpen] = useState(false)
   const detailId = useId()
@@ -19,6 +43,9 @@ export function EntryRow({ entry, onTagClick }: Props) {
   return (
     <article className={pick ? 'entry entry--pick' : 'entry'}>
       <div className="entry__head">
+        {entry.image && (
+          <Thumb src={entry.image} alt={`${entry.brand}：${entry.title}`} href={entry.links[0]?.url} />
+        )}
         <h3 className="entry__brand">{entry.brand}</h3>
         <p className="entry__title">
           {entry.title}

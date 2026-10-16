@@ -25,6 +25,7 @@ function checkEntry(where, e, isPick = false) {
   if (!KINDS.includes(e.kind)) errors.push(`${at}: kind 必須是 ${KINDS.join('/')}`)
   if (!Array.isArray(e.tags) || e.tags.length === 0) errors.push(`${at}: 至少要一個 tag`)
   if (isPick && !e.why) errors.push(`${at}: 候選需要 why`)
+  if (e.image !== undefined && !/^https:\/\//.test(e.image)) errors.push(`${at}: image 必須是 https 網址`)
   checkLinks(at, e.links)
 }
 
