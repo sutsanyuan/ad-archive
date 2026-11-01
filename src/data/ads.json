@@ -2,6 +2,135 @@
   "source": "https://docs.google.com/presentation/d/14acsOEM59zCAKZ5o9wHiNcw_E5eMd_PMrWcRDndEyq4/edit",
   "issues": [
     {
+      "id": "2026-11-01",
+      "date": "2026-11-01",
+      "entries": [
+        {
+          "id": "brewlander-ai-irresponsibly",
+          "brand": "Brewlander",
+          "title": "A.I. Irresponsibly",
+          "kind": "campaign",
+          "tags": [
+            "AI",
+            "使用者共創",
+            "戶外廣告"
+          ],
+          "by": "claude",
+          "note": "",
+          "detail": "新加坡精釀啤酒廠 Brewlander 沒有自己拍廣告，而是把寫好的 AI 影片提示詞直接印在海報、看板和平面稿上。路人把提示詞輸入文字生成影片工具，就能做出自己的啤酒廣告，上傳後可解鎖折扣。官方案例數字：品牌知名度提升 32%、累積超過 500 支 AI 廣告、估計省下約 500 萬美元製作費，並拿下 One Show 2026 銅鉛筆。",
+          "why": "廣告本身是一份給消費者的 brief，和 Vaseline Originals 一樣把創作交給群眾；也剛好接上 LEGO「是不是 AI」的討論，這次是光明正大讓 AI 上場。",
+          "agency": "BLKJ Havas",
+          "market": "新加坡",
+          "youtube": "LE2tp1wTjhg",
+          "links": [
+            {
+              "label": "Campaigns of the World",
+              "url": "https://campaignsoftheworld.com/film-and-video/brewlander-ai-irresponsibly/"
+            }
+          ]
+        },
+        {
+          "id": "asics-undropped-kit",
+          "brand": "ASICS",
+          "title": "The Undropped Kit",
+          "kind": "campaign",
+          "tags": [
+            "產品共創",
+            "解決真實痛點",
+            "女性運動"
+          ],
+          "by": "claude",
+          "note": "",
+          "detail": "ASICS 指出英國有 64% 的女孩在 16 歲前放棄運動，而學校體育服是原因之一：調查中 70% 的女孩說衣服穿得舒服就更願意上體育課，只有 12% 對現有體育服完全滿意。品牌和 Inclusive Sportswear、心理健康慈善組織 Mind 合作，透過焦點團體、問卷收集超過 2,000 名英國少女的意見，重新設計體育服，並在 Burnley High School 試穿。這套衣服目前不販售，是用來推動學校改變規定的提案。",
+          "why": "和 Dove r/eal Reviews 一樣把真實使用者的聲音放在前面，而且產出的是一件實際的衣服，不只是一支形象片。",
+          "agency": "GUT Toronto",
+          "market": "英國",
+          "youtube": "gyzNtC_3Fnw",
+          "links": [
+            {
+              "label": "Campaigns of the World",
+              "url": "https://campaignsoftheworld.com/film-and-video/asics-the-undropped-kit/"
+            }
+          ]
+        },
+        {
+          "id": "phonepe-10-years-roll-call",
+          "brand": "PhonePe",
+          "title": "10 Years of Unlocking Progress for 70 Crore Indians",
+          "kind": "campaign",
+          "tags": [
+            "週年",
+            "數字具象化",
+            "幽默"
+          ],
+          "by": "claude",
+          "note": "",
+          "detail": "印度支付 App PhonePe 十週年，請每分鐘能講 494 個字的快嘴 Shahu Supreme 把所有用戶的名字念一遍。7 億（70 crore）名用戶不停念要 980 天，大約會念到 2029 年。用一件荒謬的任務把用戶規模講清楚，取代一般企業週年的感謝影片。",
+          "why": "把「7 億用戶」這種抽象數字變成一個看得見的畫面，是很好複製的週年企劃手法。",
+          "agency": "Ogilvy India",
+          "market": "印度",
+          "image": "https://campaignsoftheworld.com/wp-content/uploads/2026/10/phonepe-10-years-campaign-70-crore-users.webp",
+          "links": [
+            {
+              "label": "Campaigns of the World",
+              "url": "https://campaignsoftheworld.com/film-and-video/honepe-10-years-campaign-70-crore-users/"
+            }
+          ]
+        },
+        {
+          "id": "dr-squatch-million-dollar-mission",
+          "brand": "Dr. Squatch",
+          "title": "SPEEDRUN: Million Dollar Mission",
+          "kind": "campaign",
+          "tags": [
+            "創作者合作",
+            "互動遊戲",
+            "實體通路"
+          ],
+          "by": "claude",
+          "note": "",
+          "detail": "Unilever 旗下男性清潔品牌 Dr. Squatch 和實況主 IShowSpeed 合作，8 月 31 日到 10 月 31 日辦了總獎金 100 萬美元的比賽：每週在一個城市藏一個裝著金條造型肥皂的公事包，靠直播和 GPS 線索尋寶，單一公事包最高 5 萬美元；另有 25 個搞笑挑戰（例如對著賣場陳列架學狗叫）讓粉絲拍片上傳，美國和加拿大超過 4,000 家 Walmart 是挑戰據點；TikTok Shop 的聯名組合還藏了 25 張 1 萬美元刮刮卡，最後一關獎金 25 萬美元。品牌長說預算從傳統廣告移到這種讓社群自己產出內容的活動。",
+          "why": "和 KitKat Heist 一樣把行銷做成一場遊戲；名人不是拿來代言，而是當遊戲主持人，帶著粉絲去實體通路。",
+          "agency": "Applied MSCHF",
+          "market": "美國、加拿大、英國、澳洲",
+          "image": "https://www.adsoftheworld.com/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBd0tiRXc9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--b0302f269436803416b628066038369206ad9d5d/Screenshot%202026-09-03%20094100.jpg",
+          "links": [
+            {
+              "label": "Marketing Dive",
+              "url": "https://www.marketingdive.com/news/why-dr-squatch-is-investing-in-experiences-not-ads-with-ishowspeed/829009/"
+            },
+            {
+              "label": "Ads of the World",
+              "url": "https://www.adsoftheworld.com/campaigns/million-dollar-mission"
+            }
+          ]
+        },
+        {
+          "id": "dominos-minecraft-dungeons-2",
+          "brand": "Domino's",
+          "title": "Domino's × Minecraft Dungeons II",
+          "kind": "campaign",
+          "tags": [
+            "遊戲聯名",
+            "會員經營",
+            "IP 合作"
+          ],
+          "by": "claude",
+          "note": "",
+          "detail": "Domino's 為新推出的底特律式個人披薩「the Domino」和 Minecraft Dungeons II 聯名，10 月 26 日起在 19 個市場上線。會員線上點餐可解鎖遊戲內的造型、披風和遊戲史上第一隻聯名寵物「Cheesy Cube」；10 月 26 日到 11 月 4 日每天送出 2,000 組免費下載遊戲的序號；非會員上傳購買證明可參加抽獎，讓品牌拿到第一方資料。另有 6 款角色收藏盒，外送追蹤頁面也換成遊戲主題。",
+          "why": "不是在遊戲裡放 logo，而是把遊戲道具綁在會員點餐上，每個環節都有明確的商業目的，可以和 KitKat Heist 的遊戲化做法對照。",
+          "market": "全球 19 個市場",
+          "image": "https://imgproxy.divecdn.com/aNJ8M1fp4EqGy7XhRJJLZZdWxshRWMWapcmK051h4Qk/g:ce/rs:fit:770:435/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9Eb21pbm9zX01pbmVjcmFmdF9QUl9IZXJvX0ltYWdlXzFfQm94RG9taW5vRExDLnBuZw==.webp",
+          "links": [
+            {
+              "label": "Marketing Dive",
+              "url": "https://www.marketingdive.com/news/dominos-links-with-minecraft-to-push-personal-pizza-via-gaming/833357/"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "id": "2026-10-16",
       "date": "2026-10-16",
       "entries": [
